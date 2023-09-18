@@ -1,0 +1,1 @@
+Application d'une transition ou plusieurs.

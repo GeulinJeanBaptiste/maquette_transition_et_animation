@@ -1,0 +1,54 @@
+#principal {
+  color: orange;
+}
+.titre {
+  color: red !important;
+}
+h1 {
+  color: fuchsia;
+}
+@keyframes ghost-animation {
+  from {
+    /* 0% est === à from */
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(50px, -50px);
+  }
+  50% {
+    transform: translate(50px, 50px);
+  }
+  75% {
+    transform: translate(100px, 50px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+#ghost {
+  height: 50px;
+  width: 50px;
+  background-color: brown;
+  border-radius: 50%;
+  position: absolute;
+  /* animation: ghost-animation 2s infinite; */
+  animation: flip-scale-2-hor-top 5s infinite;
+  top: 50%;
+  left: 50%;
+}
+
+ @keyframes flip-scale-2-hor-top {
+    0% {
+      transform: translateY(0) rotateX(0) scale(1);
+      transform-origin: 50% 0%;
+    }
+    50% {
+      transform: translateY(-50%) rotateX(-90deg) scale(2);
+      transform-origin: 50% 50%;
+    }
+    100% {
+      transform: translateY(-100%) rotateX(-180deg) scale(1);
+      transform-origin: 50% 100%;
+    }
+  }
+  
